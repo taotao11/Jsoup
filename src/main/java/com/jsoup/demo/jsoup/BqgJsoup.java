@@ -11,9 +11,12 @@ import java.util.*;
 
 /**
  * 笔趣阁 爬虫类
+ * @author tiantao
  */
 public class BqgJsoup extends TxtJsoup {
-    // list最大值
+    /**
+     * list最大值
+     */
     public static final Integer MAX_BOOT = 30;
     public BootService bootService;
     public List<Boot> list = new LinkedList<Boot>();

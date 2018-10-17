@@ -1,5 +1,7 @@
 package com.jsoup.demo.entity;
 
+import java.io.Serializable;
+
 import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
@@ -11,8 +13,8 @@ import java.io.Serializable;
  * 
  * </p>
  *
- * @author 
- * @since 2018-08-29
+ * @author 123
+ * @since 2018-10-17
  */
 @TableName("pms_permission_role")
 public class PmsPermissionRole extends Model<PmsPermissionRole> {
@@ -96,7 +98,7 @@ public class PmsPermissionRole extends Model<PmsPermissionRole> {
     @Override
     public String toString() {
         return "PmsPermissionRole{" +
-        ", id=" + id +
+        "id=" + id +
         ", roleId=" + roleId +
         ", resourceId=" + resourceId +
         ", status=" + status +

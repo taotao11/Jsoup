@@ -21,7 +21,7 @@ public class Main {
     public static void main(String[] args) {
 //        Document document;
 //        try {
-//            document = Jsoup.connect("https://www.bqg5200.com/")
+//            document = OtherJsoup.connect("https://www.bqg5200.com/")
 //                    .userAgent("Mozilla/5.0 (Windows NT 6.1; rv:22.0) Gecko/20100101 Firefox/22.0")
 //                    .ignoreContentType(true).timeout(30000)
 //                    .get();

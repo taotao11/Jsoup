@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jsoup.demo.mapper.JsoupMapper">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jsoup.demo.entity.Jsoup">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="content" property="content" />
+        <result column="read_url" property="readUrl" />
+        <result column="img_url" property="imgUrl" />
+        <result column="dw_url" property="dwUrl" />
+        <result column="auth" property="auth" />
+        <result column="status" property="status" />
+        <result column="new_works" property="newWorks" />
+        <result column="click" property="click" />
+        <result column="create_time" property="createTime" />
+        <result column="type" property="type" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        name, id, content, read_url AS readUrl, img_url AS imgUrl, dw_url AS dwUrl, auth, status, new_works AS newWorks, click, create_time AS createTime, type
+    </sql>
+
+</mapper>

@@ -1,5 +1,7 @@
 package com.jsoup.demo.entity;
 
+import java.io.Serializable;
+
 import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
@@ -10,8 +12,8 @@ import java.io.Serializable;
  * 
  * </p>
  *
- * @author 
- * @since 2018-08-29
+ * @author 123
+ * @since 2018-10-17
  */
 public class Boot extends Model<Boot> {
 
@@ -176,7 +178,7 @@ public class Boot extends Model<Boot> {
     @Override
     public String toString() {
         return "Boot{" +
-        ", name=" + name +
+        "name=" + name +
         ", id=" + id +
         ", content=" + content +
         ", readUrl=" + readUrl +

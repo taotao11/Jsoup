@@ -11,10 +11,10 @@ import org.springframework.stereotype.Service;
  *  服务实现类
  * </p>
  *
- * @author 
- * @since 2018-08-29
+ * @author 123
+ * @since 2018-10-17
  */
 @Service
-public class PmsPermissionServiceImap extends ServiceImpl<PmsPermissionMapper, PmsPermission> implements PmsPermissionService {
+public class PmsPermissionServiceImpl extends ServiceImpl<PmsPermissionMapper, PmsPermission> implements PmsPermissionService {
 
 }

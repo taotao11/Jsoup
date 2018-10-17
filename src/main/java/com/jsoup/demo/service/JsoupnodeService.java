@@ -1,6 +1,6 @@
 package com.jsoup.demo.service;
 
-import com.jsoup.demo.entity.Member;
+import com.jsoup.demo.entity.Jsoupnode;
 import com.baomidou.mybatisplus.service.IService;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.service.IService;
  * @author 123
  * @since 2018-10-17
  */
-public interface MemberService extends IService<Member> {
+public interface JsoupnodeService extends IService<Jsoupnode> {
 
 }
