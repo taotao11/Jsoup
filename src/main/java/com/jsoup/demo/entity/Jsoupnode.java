@@ -5,6 +5,7 @@ import java.io.Serializable;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * <p>
@@ -39,7 +40,26 @@ public class Jsoupnode extends Model<Jsoupnode> {
      * 外键id
      */
     private String jId;
+    @TableField(exist = false)
+    private Jsoup jsoup;
+    @TableField(exist = false)
+    private List<Jsoupnode> children;
 
+    public List<Jsoupnode> getChildren() {
+        return children;
+    }
+
+    public void setChildren(List<Jsoupnode> children) {
+        this.children = children;
+    }
+
+    public Jsoup getJsoup() {
+        return jsoup;
+    }
+
+    public void setJsoup(Jsoup jsoup) {
+        this.jsoup = jsoup;
+    }
 
     public String getId() {
         return id;

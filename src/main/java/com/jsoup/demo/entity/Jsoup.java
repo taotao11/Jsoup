@@ -73,6 +73,16 @@ public class Jsoup extends Model<Jsoup> {
      */
     private String type;
 
+    @TableField(exist = false)
+    private String node;
+
+    public String getNode() {
+        return node;
+    }
+
+    public void setNode(String node) {
+        this.node = node;
+    }
 
     public String getName() {
         return name;

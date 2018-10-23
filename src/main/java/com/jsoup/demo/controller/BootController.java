@@ -76,7 +76,7 @@ public class BootController {
      * @return
      */
     @RequestMapping("/selectByAll")
-    public Result selectByPage(Param param){
+    public Result selectByPage(@RequestBody Param param){
         Page<Boot> page = bootService.selectPage(new Page<Boot>(param.getCurrent(),param.getSize()),
                 getWrapper(param));
         return Result.success(page,"success");
