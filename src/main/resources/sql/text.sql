@@ -11,7 +11,7 @@
  Target Server Version : 100216
  File Encoding         : 65001
 
- Date: 14/10/2018 14:40:55
+ Date: 24/10/2018 22:40:27
 */
 
 SET NAMES utf8mb4;
@@ -54,6 +54,19 @@ CREATE TABLE `jsoup`  (
   `click` bigint(255) DEFAULT NULL COMMENT '点击数',
   `create_time` datetime(0) DEFAULT NULL COMMENT '时间',
   `type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '类型',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for jsoupnode
+-- ----------------------------
+DROP TABLE IF EXISTS `jsoupnode`;
+CREATE TABLE `jsoupnode`  (
+  `id` varchar(36) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '主键',
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '名称',
+  `css_query` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '网页规则',
+  `parent_Id` varchar(36) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '父ID',
+  `j_Id` varchar(36) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '外键id',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
