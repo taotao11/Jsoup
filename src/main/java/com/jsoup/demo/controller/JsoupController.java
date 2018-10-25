@@ -8,12 +8,9 @@ import com.jsoup.demo.service.JsoupnodeService;
 import com.jsoup.demo.uitls.Result;
 import com.jsoup.demo.uitls.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
@@ -54,6 +51,12 @@ public class JsoupController {
             }
         }
         return Result.error("系统错误");
+    }
+
+    @GetMapping("/selectOneById")
+    public Result selectOneById(@RequestParam("id") String id){
+        Jsoup jsoup = jsoupService.selectById(id);
+        return Result.success(jsoup,"success");
     }
 }
 
